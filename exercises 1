@@ -1,0 +1,38 @@
+// Usually when you buy something, you're asked whether your credit card number, phone number or answer 
+// to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your 
+// screen. Instead, we mask it.
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+public class codewars {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Maskify obj = new Maskify();
+		Maskify.maskify("Nebraska");
+		
+	}
+
+	public static class Maskify {
+		public static String maskify (String str) {
+			if (str.length()<= 4) {
+				System.out.print(str);
+			}
+			if (str.length() > 4) {
+				for (int i = 0; i < str.length() - 4; i++) {
+					char value;
+					value = str.charAt(0);
+					if ( 5 > 4) {
+					value = '#';
+			}
+					System.out.print(value);
+		}
+				System.out.print(str.charAt(str.length()-4));
+				System.out.print(str.charAt(str.length()-3));
+				System.out.print(str.charAt(str.length()-2));
+				System.out.print(str.charAt(str.length()-1));
+	}
+
+		return str;}
+	}
+}
