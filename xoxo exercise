@@ -1,0 +1,32 @@
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a 
+// boolean and be case insensitive. The string can contain any char.
+
+public class codewars {
+
+	public static void main(String[] args) {
+		Check obj = new Check();
+		Check.Check("xxxoooooo");
+}
+	
+public static class Check {
+	public static String Check (String str) {
+		int x = 0;
+		int o = 0;
+		for (int i = 0; i < str.length(); i++) {
+		if (str.toLowerCase().charAt(i) == 'o') {
+			o = o + 1;
+		}
+		if (str.toLowerCase().charAt(i) == 'x') {
+			x = x + 1;
+		}
+		}
+		if (x == o) {
+			System.out.println("True");
+		}
+		if (x != o) {
+			System.out.println("False");
+		}
+		return str;	
+	}
+}
+}
