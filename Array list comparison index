@@ -1,0 +1,58 @@
+// You are going to be given an array of integers. Your job is to take that array and find an index N where
+	// the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index 
+	// that would make this happen, return -1.
+  
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class codewars {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		test obj = new test();
+
+		test.populateList();
+		test.check();
+
+
+	
+	}
+	static ArrayList <Integer> List = new ArrayList<Integer>();
+	public static class test {
+		public static void populateList () {
+			System.out.println("How long will your list be?");
+			Scanner scan = new Scanner (System.in);
+			int lengther = scan.nextInt();
+			for (int z = 0; z < lengther; z++	 ) {
+			System.out.println("Enter your number");
+			int adder = scan.nextInt();
+			List.add(adder);
+			}
+			System.out.println(List);
+		}
+		
+				
+			
+	public static void check() {
+			int sum = 0;
+			for (int i = 0; i < List.size(); i++) {
+				sum = sum + List.get(i);
+			}
+			int sum2 = 0;
+			for (int x = 0;x < List.size(); x++) {
+				sum2 = sum2 +  List.get(x);
+			
+			}
+			if (sum == sum2) {
+				System.out.println(sum);
+				System.out.println(sum2);
+				System.out.println(sum == sum2);
+			}
+			else {
+				System.out.println(sum);
+				System.out.println(sum2);
+				System.out.println("-1");
+			}
+	}
+	}
+}
